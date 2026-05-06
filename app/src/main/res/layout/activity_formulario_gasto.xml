@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FormularioGastoActivity">
+
+    <com.example.chequeo.FullScreenVideoView
+        android:id="@+id/vvBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/cardFormulario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:background="@drawable/background_card_traslucido"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detalle del Gasto"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monto"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etMonto"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="0.00"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textColorHint="#66FFFFFF"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categoría"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp" />
+
+        <EditText
+            android:id="@+id/etCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:hint="Ej: Supermercado"
+            android:inputType="text"
+            android:textColor="@color/white"
+            android:textColorHint="#66FFFFFF"
+            android:backgroundTint="@color/white"
+            android:textSize="18sp"
+            android:layout_marginBottom="30dp"/>
+
+        <Button
+            android:id="@+id/btnConfirmarRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="CONFIRMAR"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FFFFFF"
+            android:textColor="#000000"
+            app:cornerRadius="16dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
