@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Chequeo">
 
+        <!-- LAUNCHER: el Splash decide si va a Login o Main -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
@@ -20,17 +23,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FormularioGastoActivity"
+
+        <activity
+            android:name=".LoginActivity"
             android:exported="false"/>
+
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"/>
+
+        <activity
+            android:name=".FormularioGastoActivity"
+            android:exported="false"/>
+
         <activity
             android:name=".EstadisticasActivity"
-            android:exported="false" />
+            android:exported="false"/>
+
         <activity
             android:name=".ResumenActivity"
-            android:exported="false" />
+            android:exported="false"/>
 
     </application>
 
