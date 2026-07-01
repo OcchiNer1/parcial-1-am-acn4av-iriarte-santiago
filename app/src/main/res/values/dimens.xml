@@ -1,3 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="margen_general">20dp</dimen>
+    <dimen name="margen_horizontal">24dp</dimen>
+    <dimen name="margen_pequeno">12dp</dimen>
+    <dimen name="margen_bottom_boton">30dp</dimen>
+
+    <dimen name="padding_card_principal">20dp</dimen>
+    <dimen name="padding_card_formulario">24dp</dimen>
+    <dimen name="padding_card_resumen">16dp</dimen>
+    <dimen name="padding_item">16dp</dimen>
+    <dimen name="padding_estadisticas_h">16dp</dimen>
+    <dimen name="padding_estadisticas_bottom">24dp</dimen>
+    <dimen name="padding_header_top">48dp</dimen>
+
+    <dimen name="alto_boton_principal">60dp</dimen>
+    <dimen name="alto_boton_secundario">55dp</dimen>
+    <dimen name="alto_input">55dp</dimen>
+
+    <dimen name="texto_titulo_grande">26sp</dimen>
+    <dimen name="texto_titulo_medio">22sp</dimen>
+    <dimen name="texto_subtitulo">20sp</dimen>
+    <dimen name="texto_cuerpo">16sp</dimen>
+    <dimen name="texto_label">14sp</dimen>
+    <dimen name="texto_pequeno">12sp</dimen>
+    <dimen name="texto_micro">11sp</dimen>
+
+    <dimen name="icono_categoria">40dp</dimen>
+    <dimen name="margen_icono">12dp</dimen>
+    <dimen name="alto_barra_progreso">4dp</dimen>
+    <dimen name="margen_barra_top">12dp</dimen>
+
+    <dimen name="elevacion_card">8dp</dimen>
+    <dimen name="elevacion_boton">6dp</dimen>
+
+    <dimen name="radio_boton">16dp</dimen>
+    <dimen name="radio_boton_redondo">25dp</dimen>
+
     <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="splash_logo_size">120dp</dimen>
+    <dimen name="splash_texto_size">28sp</dimen>
+    <dimen name="splash_subtexto_size">14sp</dimen>
 </resources>

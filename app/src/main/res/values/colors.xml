@@ -3,5 +3,35 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="purple_500">#FF6200EE</color>
+    <color name="accent_purple">#FF7B68EE</color>
+    <color name="accent_blue">#FF4F8EF7</color>
+    <color name="accent_purple_dim">#337B68EE</color>
+    <color name="accent_blue_dim">#334F8EF7</color>
+    <color name="accent_blue_border">#664F8EF7</color>
+
+    <color name="bg_card_principal">#CC000000</color>
+    <color name="bg_card_resumen">#B3000000</color>
+    <color name="bg_card_transacciones">#991A1A1A</color>
+    <color name="bg_overlay_dim">#66000000</color>
+    <color name="bg_item_mini">#1AFFFFFF</color>
+
+    <color name="texto_secundario">#AAAAAA</color>
+    <color name="texto_hint">#66FFFFFF</color>
+    <color name="texto_muted">#80FFFFFF</color>
+
+    <color name="btn_oscuro">#1F1F1F</color>
+    <color name="btn_negro">#FF000000</color>
+
+    <color name="barra_fondo">#33FFFFFF</color>
+
+    <color name="categoria_1">#FF4F8EF7</color>
+    <color name="categoria_2">#FF7B68EE</color>
+    <color name="categoria_3">#FF3ECFA1</color>
+    <color name="categoria_4">#FFF76F6F</color>
+    <color name="categoria_5">#FFFFB347</color>
+    <color name="categoria_6">#FF5FD3C4</color>
+    <color name="categoria_7">#FFE07BE0</color>
+    <color name="categoria_8">#FF89D44D</color>
+
+    <color name="splash_fondo">#FF000000</color>
 </resources>
