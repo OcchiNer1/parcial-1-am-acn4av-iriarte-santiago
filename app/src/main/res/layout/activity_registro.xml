@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.chequeo.FullScreenVideoView
+        android:id="@+id/vvBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/bg_overlay_dim"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/cardRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_card_formulario"
+        android:background="@drawable/background_card_traslucido"
+        android:layout_margin="@dimen/margen_horizontal"
+        android:elevation="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registro_titulo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/texto_titulo_medio"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registro_subtitulo"
+            android:textColor="@color/texto_muted"
+            android:textSize="@dimen/texto_label"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="28dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_label_email"
+            android:textColor="@color/texto_secundario"
+            android:textSize="@dimen/texto_pequeno"/>
+
+        <EditText
+            android:id="@+id/etEmailRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_input"
+            android:hint="@string/login_hint_email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
+            android:textColorHint="@color/texto_hint"
+            android:backgroundTint="@color/accent_purple"
+            android:textSize="16sp"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_label_password"
+            android:textColor="@color/texto_secundario"
+            android:textSize="@dimen/texto_pequeno"/>
+
+        <EditText
+            android:id="@+id/etPasswordRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_input"
+            android:hint="@string/login_hint_password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/texto_hint"
+            android:backgroundTint="@color/accent_purple"
+            android:textSize="16sp"
+            android:layout_marginBottom="28dp"/>
+
+        <Button
+            android:id="@+id/btnCrearCuenta"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton_principal"
+            android:text="@string/registro_btn_crear"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/texto_cuerpo"
+            android:background="@drawable/btn_accent"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btnVolverLogin"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/alto_boton_secundario"
+            android:text="@string/registro_btn_volver_login"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/texto_cuerpo"
+            android:background="@drawable/btn_accent_dark"/>
+
+        <TextView
+            android:id="@+id/tvRegistroError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#FFF76F6F"
+            android:textSize="@dimen/texto_pequeno"
+            android:gravity="center"
+            android:layout_marginTop="12dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
