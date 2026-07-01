@@ -6,20 +6,30 @@
     android:orientation="vertical"
     android:layout_marginBottom="10dp"
     android:background="@drawable/background_card_traslucido"
-    android:padding="16dp">
+    android:padding="@dimen/padding_item">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
+        <ImageView
+            android:id="@+id/ivCategoriaIcono"
+            android:layout_width="@dimen/icono_categoria"
+            android:layout_height="@dimen/icono_categoria"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:clipToOutline="true"
+            android:visibility="gone" />
+
         <TextView
             android:id="@+id/tvLetraIcono"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/icono_categoria"
+            android:layout_height="@dimen/icono_categoria"
             android:gravity="center"
-            android:textColor="#FFFFFF"
-            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/texto_cuerpo"
             android:textStyle="bold"
             android:background="@drawable/circle_background" />
 
@@ -28,13 +38,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginStart="12dp">
+            android:layout_marginStart="@dimen/margen_icono">
 
             <TextView
                 android:id="@+id/tvCat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/white"
                 android:textSize="15sp"
                 android:textStyle="bold"
                 android:maxLines="1"
@@ -44,11 +54,12 @@
                 android:id="@+id/tvCantTransacciones"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#80FFFFFF"
-                android:textSize="12sp"
+                android:textColor="@color/texto_muted"
+                android:textSize="@dimen/texto_pequeno"
                 android:layout_marginTop="2dp" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,16 +70,16 @@
                 android:id="@+id/tvMonto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/texto_cuerpo"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvPorcentaje"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#80FFFFFF"
-                android:textSize="12sp"
+                android:textColor="@color/texto_muted"
+                android:textSize="@dimen/texto_pequeno"
                 android:gravity="end"
                 android:layout_marginTop="2dp" />
 
@@ -76,19 +87,18 @@
 
     </LinearLayout>
 
-    <!-- Barra de progreso -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:layout_marginTop="12dp"
-        android:background="#33FFFFFF"
+        android:layout_height="@dimen/alto_barra_progreso"
+        android:layout_marginTop="@dimen/margen_barra_top"
+        android:background="@color/barra_fondo"
         android:clipChildren="true">
 
         <View
             android:id="@+id/barraProgreso"
             android:layout_width="0dp"
-            android:layout_height="4dp"
-            android:background="#FFFFFFFF" />
+            android:layout_height="@dimen/alto_barra_progreso"
+            android:background="@color/white" />
 
     </FrameLayout>
 

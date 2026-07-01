@@ -20,10 +20,10 @@
         android:id="@+id/cardFormulario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="24dp"
+        android:layout_margin="@dimen/margen_horizontal"
         android:background="@drawable/background_card_traslucido"
         android:orientation="vertical"
-        android:padding="24dp"
+        android:padding="@dimen/padding_card_formulario"
         android:elevation="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,11 +31,23 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:background="@drawable/btn_accent"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Detalle del Gasto"
+            android:text="@string/titulo_detalle"
             android:textColor="@color/white"
-            android:textSize="22sp"
+            android:textSize="@dimen/texto_titulo_medio"
             android:textStyle="bold"
             android:layout_marginBottom="24dp"
             android:layout_gravity="center_horizontal"/>
@@ -43,51 +55,51 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Monto"
-            android:textColor="#AAAAAA"
-            android:textSize="12sp" />
+            android:text="@string/label_monto"
+            android:textColor="@color/texto_secundario"
+            android:textSize="@dimen/texto_pequeno" />
 
         <EditText
             android:id="@+id/etMonto"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="0.00"
+            android:layout_height="@dimen/alto_input"
+            android:hint="@string/hint_monto"
             android:inputType="numberDecimal"
             android:textColor="@color/white"
-            android:textColorHint="#66FFFFFF"
-            android:backgroundTint="@color/white"
+            android:textColorHint="@color/texto_hint"
+            android:backgroundTint="@color/accent_purple"
             android:textSize="18sp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="@dimen/padding_card_resumen"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Categoría"
-            android:textColor="#AAAAAA"
-            android:textSize="12sp" />
+            android:text="@string/label_categoria"
+            android:textColor="@color/texto_secundario"
+            android:textSize="@dimen/texto_pequeno" />
 
         <EditText
             android:id="@+id/etCategoria"
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:hint="Ej: Supermercado"
+            android:layout_height="@dimen/alto_input"
+            android:hint="@string/hint_categoria"
             android:inputType="text"
             android:textColor="@color/white"
-            android:textColorHint="#66FFFFFF"
-            android:backgroundTint="@color/white"
+            android:textColorHint="@color/texto_hint"
+            android:backgroundTint="@color/accent_purple"
             android:textSize="18sp"
             android:layout_marginBottom="30dp"/>
 
         <Button
             android:id="@+id/btnConfirmarRegistro"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="CONFIRMAR"
-            android:textSize="16sp"
+            android:layout_height="@dimen/alto_boton_principal"
+            android:text="@string/btn_confirmar"
+            android:textSize="@dimen/texto_cuerpo"
             android:textStyle="bold"
-            android:backgroundTint="#FFFFFF"
-            android:textColor="#000000"
-            app:cornerRadius="16dp" />
+            android:textColor="@color/white"
+            android:background="@drawable/btn_accent"
+            app:cornerRadius="@dimen/radio_boton" />
 
     </LinearLayout>
 

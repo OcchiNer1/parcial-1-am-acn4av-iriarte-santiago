@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <com.example.chequeo.FullScreenVideoView
         android:id="@+id/vvBackground"
         android:layout_width="0dp"
@@ -11,96 +12,118 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
     <LinearLayout
         android:id="@+id/cardMain"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp"
-        android:background="#CC000000"
-        android:elevation="8dp"
-        android:layout_margin="20dp"
+        android:padding="@dimen/padding_card_principal"
+        android:background="@color/bg_card_principal"
+        android:elevation="@dimen/elevacion_card"
+        android:layout_margin="@dimen/margen_general"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <TextView
-            android:text="Nuevo gasto"
+            android:text="@string/titulo_nuevo_gasto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/texto_subtitulo"
             android:textStyle="bold"/>
 
         <Button
             android:id="@+id/btnNuevoGasto"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:text="+ Agregar"
-            android:textSize="16sp"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#1F1F1F"
-            app:cornerRadius="16dp"
-            android:layout_marginTop="12dp"/>
+            android:layout_height="@dimen/alto_boton_principal"
+            android:text="@string/btn_agregar"
+            android:textSize="@dimen/texto_cuerpo"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/btn_accent"
+            android:layout_marginTop="@dimen/margen_pequeno"/>
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/cardResumen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:background="#B3000000"
-        android:elevation="6dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="@dimen/padding_card_resumen"
+        android:background="@color/bg_card_resumen"
+        android:elevation="@dimen/elevacion_boton"
+        android:layout_marginHorizontal="@dimen/margen_general"
+        android:layout_marginTop="@dimen/margen_pequeno"
         app:layout_constraintTop_toBottomOf="@id/cardMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <TextView
-            android:text="Gasto semanal"
-            android:textColor="#AAAAAA"
-            android:textSize="14sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="@string/label_gasto_semanal"
+                android:textColor="@color/texto_secundario"
+                android:textSize="@dimen/texto_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvMonto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/monto_inicial"
+                android:textColor="@color/white"
+                android:textSize="@dimen/texto_titulo_grande"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"/>
+        </LinearLayout>
 
         <TextView
-            android:id="@+id/tvMonto"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$0.00"
-            android:textColor="@android:color/white"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            android:layout_marginTop="4dp"/>
+            android:text="💰"
+            android:textSize="28sp"/>
     </LinearLayout>
-    <LinearLayout
-        android:id="@+id/containerTransacciones"
+
+    <ScrollView
+        android:id="@+id/scrollTransacciones"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:orientation="vertical"
-        android:background="#991A1A1A"
-        android:padding="12dp"
-        android:elevation="4dp"
-        android:layout_margin="20dp"
+        android:scrollbars="none"
+        android:layout_margin="@dimen/margen_general"
         app:layout_constraintTop_toBottomOf="@id/cardResumen"
         app:layout_constraintBottom_toTopOf="@id/btnEstadistica"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/containerTransacciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"/>
+
+    </ScrollView>
 
     <Button
         android:id="@+id/btnEstadistica"
         android:layout_width="0dp"
-        android:layout_height="55dp"
-        android:text="Ver estadísticas"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        android:backgroundTint="#000000"
-        app:cornerRadius="25dp"
-        android:elevation="6dp"
-        android:layout_margin="20dp"
+        android:layout_height="@dimen/alto_boton_secundario"
+        android:text="@string/btn_estadisticas"
+        android:textColor="@color/white"
+        android:textSize="@dimen/texto_cuerpo"
+        android:textStyle="bold"
+        android:background="@drawable/btn_accent_dark"
+        android:elevation="@dimen/elevacion_boton"
+        android:layout_margin="@dimen/margen_general"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
